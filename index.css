@@ -165,7 +165,7 @@ p {
 }
 
 .chivolo .overlay-on, .wearing .overlay-on {
-    z-index: 1;
+    z-index: 2;
 }
 
 .chivolo-subtitle {
