@@ -1,112 +1,202 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Georgia Kirkpatrick</title>
-    <link href="index.css" rel="stylesheet" text="text/css">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Georgia Kirkpatrick</title>
+        <script src="https://kit.fontawesome.com/c24aed2c8c.js" crossorigin="anonymous"></script>
+        <link href="index.css" rel="stylesheet" text="text/css">
+        <link href="https://fonts.googleapis.com/css2?family=Monoton&family=Muli&family=Philosopher&family=Archivo+Black&display=swap" rel="stylesheet">
+    </head>
 
-<body>
-    <main>
-        <nav class = "menu">
-            <ul>
-                <li><a class = "menu-projects" href="#projects">Projects</a></li>
-                <li><a class = "menu-bio" href="#bio">Bio</a></li>
-                <li><a class = "menu-contact" href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-        <section class = "hero">
+    <body>
+        <section class="hero relative color-pink">
+            <nav class="menu absolute">
+                <div id="menu-icon" class="bar-container">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </div>
+
+                <div id="menu-overlay" class="overlay color-turquoise">
+                    <div id="menu-items">
+                        <a href="#projects" class="menu-item">Projects</a>
+                        <a href="#contact" class="menu-item">Contact</a>
+                        <a href="#bio" class="menu-item">Bio</a>
+                        <a href="#socials" class="menu-item">Socials</a>
+                    </div>
+                </div>
+            </nav>
+
             <header>
-                <h1>
-                    Georgia Kirkpatrick
-                </h1>
-
-                <h2>            
-                    Hey, it's Georgia!  I am a web developer and mission-driven entrepreneur with a passion for problem-solving.
-                </h2>
+                <h1>Georgia Kirkpatrick</h1>
+                <h2>Mission-driven</h2>
+                <h2>web developer,</h2>
+                <h2>fashion designer,</h2>
+                <h2>+ digital marketing enthusiast.</h2>
             </header>
+
+            <a href="#georgia-top">
+                <img id="scroll-down" class="scroll absolute" src="images/scroll-down-arrow.png" alt="scroll down arrow">
+            </a>
         </section>
-        
 
-        <section class = "projects-section relative">
-            <h3 class = "absolute-right">
-                Projects
-            </h3>
+        <main>
+            <div id="georgia-top" class = "georgia-pic relative">
+                <div class="grid-item-bg"></div>
+                <div class="box color-transparent-blue absolute">
+                    <a href="#about-georgia">
+                        <div id="georgia-button" class="button-div">READ MORE ABOUT GEORGIA</div>
+                    </a>
+                </div>    
+            </div>
 
-            <section class = "project-box project-1">
-                <img>
-                <p>Screenshot of Project</p>
-                <h4>
-                    What Are You Wearing
-                </h4>
-                <p>
-                    Project description just my luck, no ice. Hey, take a look at the earthlings. Goodbye! 
-                    Yeah, but John, if The Pirates of the Caribbean breaks down, the pirates don’t eat the tourists. 
-                    Jaguar shark! So tell me - does it really exist? You're a very talented young man, with your own clever 
-                    thoughts and ideas. Do you need a manager?
-                </p>
-            </section>
-            
-            <section class = "project-box project-2">
-                <img>
-                <p>Screenshot of Project</p>
-                <h4>
-                    Project 2
-                </h4>
-                <p>
-                    Project description do you have any idea how long it takes those cups to decompose. Jaguar shark! 
-                    So tell me - does it really exist? Just my luck, no ice. God help us, we're in the hands of engineers. 
-                    Forget the fat lady! You're obsessed with the fat lady! Drive us out of here!
-                </p>
-            </section>
-            
-            <section class = "project-box project-3">
-                <img>
-                <h4>
-                    Project 3
-                </h4>
-                <p>
-                    Project description must go faster... go, go, go, go, go! Yeah, but your scientists were so preoccupied 
-                    with whether or not they could, they didn't stop to think if they should. Must go faster... go, go, go, go, go! 
-                    Checkmate... Yeah, but your scientists were so preoccupied with whether or not they could, they didn't stop to 
-                    think if they should.
-                </p>
-            </section>
-        </section>    
+            <section id="projects" class="project">
+                <div class="recent-projects">
+                    <h2 class="recent-title font-turquoise">Projects</h2>
+                </div>
+                
+                <section id="web" class="web-section relative">
+                    <h3 id="web-title" class="web absolute">Web</h3>
+                    <div class="web-rectangle absolute"></div>
+                </section>
 
-        <section class = "bio-contact-section">
-            <section class = "bio-contact-box bio relative">
-                <h3 class = "absolute-right">
-                    Bio
-                </h3>
-                <img>
-                <p>Picture of Georgia</p>
-                <p>
-                    I grew up in the fair city of Portland, Oregon, where I also earned a biology degree and rejoiced in the nerdy                             intellectualism of Reed College.  Upon graduating, I launched a clothing business inspired by my grandmother's 
-                    fabric business and organic cotton farmers in Peru, where I spend a fair amount of time and have the good fortune 
-                    of holding citizenship.  I credit entrepreneurship with my cultivation of digital marketing skills and my discovery 
-                    of programming.  Enticed by the power of web development, I enrolled in a coding bootcamp and reveled in a newfound                     form of creativity.  When I'm not coding, I manage social media profiles for mission-driven businesses, blog about 
-                    women's clothing with pockets, and plot my next trip to the rainforest.
-                </p>   
+                <div id="wearing" class="wearing relative">
+                    <section id="wearing-section" class="blob color-yellow">
+                        <h4 class="wearing-title">What Are You Wearing?</h4>
+                        <p class="wearing-subtitle">
+                            A fabric sustainability quiz.  The first thing I coded from scratch.
+                        </p>
+                        <button id="wearing-button" class="read-more">READ MORE</button>
+                    </section>
+
+                    <img class="project-pic mobile absolute" src="images/what-are-you-wearing-mobile.png" alt="What Are You Wearing quiz screenshot">
+                    <img class = "project-pic desktop absolute" src="images/What Are You Wearing 4.png" alt="What Are You Wearing quiz screenshot">
+                    
+                    <section id="wearing-overlay" class="overlay">
+                        <div id="close-wearing" class="bar-container cross absolute">
+                            <div class="bar1"></div>
+                            <div class="bar2"></div>
+                            <div class="bar3"></div>
+                        </div>
+                        <h4 class="wearing-title">What Are You Wearing?</h4>
+                        <p>A fabric sustainability quiz.  The first thing I coded from scratch.</p>
+                        <p>What is the most common fiber used in the fashion industry?  The difference between rayon and tencel?
+                            And what is microplastic?  Find out in this 10-question quiz.
+                        </p>
+                        <div class="technologies">
+                            <p>
+                                <span class="technology">HTML</span>
+                                <span class="technology">CSS</span>
+                                <span class="technology">JS</span>
+                            </p>
+                        </div>
+                        <div class="overlay-buttons">
+                            <a href="https://georgiakirkpatrick.github.io/quiz-app/" target="_blank">
+                                <div id="wearing-online" class="button-div">
+                                    SEE IT ONLINE
+                                </div>
+                            </a>
+                            <a href="https://github.com/georgiakirkpatrick/quiz-app" target="_blank">
+                                <div id="wearing-online" class="button-div">
+                                    GITHUB REPO
+                                </div>
+                            </a>
+                        </div>
+                    </section>
+                </div>
+
+                <div id="chivolo" class="chivolo relative">
+                    <section id="chivolo-section" class="blob color-turquoise">
+                        <h4 class="chivolo-title">Chivolo</h4>
+                        <p class="chivolo-subtitle">
+                            A video app for kids that reflects the diversity of the real world.
+
+                        </p>
+                        <button id="chivolo-button" class="read-more">READ MORE</button>
+                    </section>
+
+                    <img class="project-pic mobile absolute" src="images/chivolo-mobile.png" alt="Chivolo screenshot">
+                    <img class = "project-pic desktop absolute" src = "" alt = "">
+
+                    <section id="chivolo-overlay" class="overlay">
+                        <div id="close-chivolo" class="bar-container cross absolute">
+                            <div class="bar1"></div>
+                            <div class="bar2"></div>
+                            <div class="bar3"></div>
+                        </div>
+                        <h4 class="chivolo-title">Chivolo</h4>
+                        <p>A video app for kids that reflects the diversity of the real world.</p>
+                        <p>
+                            When I reviewed my four-year-old stepdaughter's viewing history on the YouTube Kids app, I found that very few videos 
+                            featured characters of color.  I created Chivolo with content from the YouTube Data API to provide families with kids' 
+                            videos that reflect the diversity of the real world, helping children connect with characters who look like themselves 
+                            and form positive associations with people of all races.    
+                        </p>
+                        <div class="technologies">
+                            <p>
+                                <span class="technology">HTML</span>
+                                <span class="technology">CSS</span>
+                                <span class="technology">JS</span>
+                            </p>
+                        </div>
+                        <div class="overlay-buttons">
+                            <a href="https://georgiakirkpatrick.github.io/chivolo/" target="_blank">
+                                <div id="wearing-online" class="button-div">
+                                    SEE IT ONLINE
+                                </div>
+                            </a>
+                            <a href="https://github.com/georgiakirkpatrick/chivolo" target="_blank">
+                                <div id="wearing-online" class="button-div">
+                                    GITHUB REPO
+                                </div>
+                            </a>
+                        </div>
+                    </section>
+                </div>
             </section>
 
-            <section class = "bio-contact-box contact relative">
-                <h3 class = "absolute-right">
-                    Contact
-                </h3>
-                <p>Picture of Georgia</p>
-                <p>
-                    <a href = "mailto: georgia.kirkpatrick@gmail.com">georgia.kirkpatrick
-                        @gmail.com</a>
-                </p>
-                <ul>
-                    <li><a class = "" href="">GitHub icon</a></li>
-                    <li><a class = "" href=""></a>LinkedIn icon</li>
-                </ul>
+            <section id="about-georgia" class="about-georgia">
+                <section id="bio" class="bio color-purple">
+                    <h4 class="bio-title">Bio</h4>
+                    <p>
+                        In my twenties, I launched <a href="https://silvaniaperu.com/" target="_blank"><span>a clothing brand</span></a> 
+                        inspired by my grandmother's 
+                        fabric business and organic cotton farmers in Peru, where I spend a fair amount
+                        of time when I'm not in my beloved home base of Portland, Oregon.
+                    </p>
+                    <p>
+                        I credit entrepreneurship with my cultivation of digital marketing skills and my 
+                        discovery of the joys of computer programming.  Enticed by the power of web development, 
+                        I enrolled in a coding bootcamp and reveled in a newfound form of creativity. 
+                    </p>
+                    <p>
+                        When I'm not coding, I manage <span>social media</span>
+                        profiles for mission-driven businesses, <span>blog</span>
+                        about women's clothing with pockets, and plot my next trip to a tropical rainforest.
+                    </p>
+                </section>
+
+                <div id="contact" class="get-in-touch">
+                    <h2 class="contact-title font-turquoise">Get in touch!</h2>
+                </div>
+                <section class="contact-section">
+                    <a href ="mailto:georgia.kirkpatrick@gmail.com" target="_blank">
+                        <h3 class="email">georgia.kirkpatrick@gmail.com</h3>
+                    </a>
+                </section>
             </section>
-        </section>
-    </main>
-</body>
+            <footer id="socials" class="socials">
+                <a href="https://www.instagram.com/silvaniaprints/" target="_blank"><span class="social">INSTA</span></a>
+                <a href="https://www.linkedin.com/in/georgia-kirkpatrick/" target="_blan":><span class="social">LINKEDIN</span></a>
+                <a href="https://github.com/georgiakirkpatrick" target="_blank"><span class="social">GITHUB</span></a>
+            </footer>
+                
+        </main>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+            crossorigin="anonymous"></script>
+        <script src="index.js"></script>
+    </body>
 </html>
