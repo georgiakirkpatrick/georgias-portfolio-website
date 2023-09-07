@@ -51,3 +51,5 @@ function handlePortfolio() {
 }
 
 $(handlePortfolio)
+
+i=0
