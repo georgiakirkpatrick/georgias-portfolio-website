@@ -1,55 +1,34 @@
-function listenForChivoloClick() {
-    $('#chivolo-section').on('click', '#chivolo-button', function() {
-        let chivoloOverlay = document.getElementById("chivolo-overlay")
 
-        $(chivoloOverlay).addClass('overlay-on')
 
-        $('#close-chivolo').on('click', function() {
-    
-            $(chivoloOverlay).removeClass('overlay-on')
-        })
+$( document ).ready(
+    $("#menu-icon").on("click", () => {
+        if ( $("#menu-icon").hasClass("cross") ) {
+            $("#menu-icon").removeClass("cross")
+            $("#menu").removeClass("overlay-on")
+        } else {
+            $("#menu-icon").addClass("cross")
+            $("#menu").addClass("overlay-on")
+        }
+    }),
+
+    $("#menu > li").on("click", () => {
+        if ( $("#menu-icon").hasClass("cross") ) {
+            $("#menu-icon").removeClass("cross")
+            $("#menu").removeClass("overlay-on")
+        }
     })
-}
+    // ,
 
-function listenForWearingClick() {
-    $('#wearing-section').on('click', '#wearing-button', function() {
-        let wearingOverlay = document.getElementById("wearing-overlay")
+    // $("#contact-form").on("submit", event => {
+    //     event.preventDefault()
 
-        $(wearingOverlay).addClass('overlay-on')
+    //     const contactData = $("#contact-form").serializeArray()
 
-        $('#close-wearing').on('click', function() {
-    
-            $(wearingOverlay).removeClass('overlay-on')
-        })
-    })
-}
+    //     console.log('contactData', contactData)
+    //     const contactObject = {}
 
-function listenMenuItem() {
-    let menuItems = document.getElementById("menu-items")
-    let menuOverlay = document.getElementById("menu-overlay")
-
-    menuItems.addEventListener('click', function() {
-        $('#menu-icon').toggleClass('cross')
-        $(menuOverlay).toggleClass('overlay-on')
-    })
-}
-
-function listenForMenuClick() {
-    $('nav').on('click', '#menu-icon', function() {
-        $('#menu-icon').toggleClass('cross')
-
-        let menuOverlay = document.getElementById("menu-overlay")
-        $(menuOverlay).toggleClass('overlay-on')
-    })
-}
-
-function handlePortfolio() {
-    listenForMenuClick()
-    listenMenuItem()
-    listenForWearingClick()
-    listenForChivoloClick()
-}
-
-$(handlePortfolio)
-
-i=0
+    //     for (let i=0; i < contactData.length; i++) {
+    //         contactObject[contactData[i].name] = contactData[i].value
+    //     }
+    // })
+)
