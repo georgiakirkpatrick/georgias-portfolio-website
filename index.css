@@ -254,6 +254,14 @@ ul {
     padding: 10px;
 }
 
+.contact {
+    position: relative;
+}
+
+.contact > input {
+    width: 100%;
+}
+
 .copy {
     display: block;
     position: relative;
@@ -286,10 +294,6 @@ ul {
     opacity: 0;
     height: 0;
     width: 0;
-}
-
-.contact > input {
-    width: 100%;
 }
 
 .cross {
@@ -366,6 +370,62 @@ ul {
 .relative {
     position: relative;
 }
+
+.success {
+    display: none;
+    transition: 0.5s;
+}
+
+.success .message .close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 5px;
+    margin: 5px
+}
+
+.success.on {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #a8642d2e;
+    color: black;
+}
+
+.success.on .message {
+    position: relative;
+    padding: 50px;
+    background-color: #fff;
+    border: 1px solid #a8642d2e;
+    border-radius: 10px;
+}
+
+.success .submitting {
+    display: none;
+}
+
+.success .submitting.on {
+    display: initial;
+}
+
+.thanks {
+    display: none;
+}
+
+.thanks.on {
+    display: initial;
+}
+
+/* .success-on p {
+    font-weight: bold;
+    font-size: 1em;
+} */
 
 @media screen and (min-width: 500px) {
     form {

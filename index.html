@@ -8,7 +8,7 @@
         <link href="index.css" rel="stylesheet" text="text/css">
         <link href="https://fonts.googleapis.com/css2?family=Monoton&family=Muli&family=Philosopher&family=Archivo+Black&display=swap" rel="stylesheet">
         <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-        <script src="https://kit.fontawesome.com/c24aed2c8c.js" crossorigin="anonymous" async></script>
+        <script src="https://kit.fontawesome.com/c24aed2c8c.js" crossorigin="anonymous"></script>
         <script src="index.js" async></script>
         <noscript>
             <div class="noscript">
@@ -48,9 +48,6 @@
 
         <main>
             <div id="about" class="about">
-                <?php 
-                    echo "Hello World!"; 
-                ?>
                 <p>
                     I am a full-stack software engineer based in Portland, Oregon.  I am proficient in using JavaScript for front-end and back-end programming, React, HTML, CSS, API implementation, Node.JS, Express, and PostgreSQL.
                     I am eager to collaborate with mission-driven organizations.
@@ -175,7 +172,7 @@
             <section id="contact">
                 <h2>Contact</h2>
 
-                <form id="contact-form" action="send-mail.php" method="post">
+                <form id="contact-form" method="post">
                     <div class="contact">
                         <ul>
                             <li>
@@ -190,7 +187,7 @@
     
                             <li>
                                 <label for="subject">Subject</label>
-                                <textarea id="subject" name="subject" maxlength="200" required></textarea>
+                                <textarea id="subject" name="subject" maxlength="200"></textarea>
                             </li>
     
                             <li>
@@ -208,14 +205,30 @@
                                    tabindex="-1">
                         </label>
     
-                        <label for="cpy" class="copy">Send me a copy
-                            <input type="checkbox" id="cpy" name="cpy" />
+                        <label for="copy" class="copy">Send me a copy
+                            <input type="checkbox" id="copy" name="copy" value="sendcc"/>
                             <span class="checkybox"></span>
                         </label>
     
                         <button type="submit">Send</button>
                     </div>
                 </form>
+
+                <div id="success" class="success">
+                    <div class="message">
+                        <div id="success-close" class="close">
+                            <i class="fa-solid fa-x"></i>
+                        </div>
+
+                        <p id="submitting" class="submitting">
+                            Submitting your message...
+                        </p>
+
+                        <p id="thanks" class="thanks">
+                            Submitted!  Thanks for your message.  I'll be in touch soon.
+                        </p>
+                    </div>
+                </div>
             </section>
         </main>
 
