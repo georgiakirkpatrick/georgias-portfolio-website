@@ -65,7 +65,6 @@ $( document ).ready(
                     return response.text()
                 })
                 .then(txt => {
-                    console.log('here is the text', txt)
                     $("#copy").prop("checked", false)
                     clearForm()
                 })
