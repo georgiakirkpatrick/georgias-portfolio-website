@@ -18,7 +18,7 @@
         $mail->Username = $_ENV["USERNAME"];
         $mail->Password = $_ENV["PASSWORD"];
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
-        $mail->Port = $_ENV["PORT"];
+        $mail->Port = 587;
 
         $formName = $_POST["formName"];
         $formEmail = $_POST["formEmail"];
