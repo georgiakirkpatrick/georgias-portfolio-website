@@ -422,10 +422,10 @@ ul {
     display: initial;
 }
 
-/* .success-on p {
+.success-on p {
     font-weight: bold;
     font-size: 1em;
-} */
+}
 
 @media screen and (min-width: 500px) {
     form {
@@ -478,5 +478,13 @@ ul {
 @media screen and (min-width: 700px) {
     h1 {
         font-size: 8.2em;
+    }
+
+    .desktop {
+      display: initial;
+    }
+
+    .mobile {
+      display: none;
     }
 }
