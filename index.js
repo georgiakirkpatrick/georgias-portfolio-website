@@ -1,115 +1,102 @@
 const clearForm = () => {
-    $( "form :input" ).val( "" )
-    if ($("#copy").checked) {
-        $("#copy").removeProp("checked")
-    }
+  $( "form :input" ).val( "" )
+  if ($("#copy").checked) {
+      $("#copy").removeProp("checked")
+  }
 }
 
 const validateEmail = email => {
-    const res = /^[^@]+@\w+(\.\w+)+\w$/
-    return res.test(email)
+  const res = /^[^@]+@\w+(\.\w+)+\w$/
+  return res.test(email)
 }
 
 $( document ).ready(
-    $("#contact-form").on("submit", event => {
-        event.preventDefault()
+  $("#contact-form").on("submit", event => {
+    event.preventDefault()
 
-        if ($("#thanks").hasClass("on")) {
-            console.log('it was on')
-            $("#thanks").removeClass("on")
+    if ($("#success").hasClass("on")) {
+      console.log('it was on')
+      $("#success").removeClass("on")
+    }
+
+    const formName = $('#user_name').val()
+    const formEmail = $('#user_email').val()
+    const formMessage = $('#message').val()
+
+    if (formName !== '' && formEmail !== '' && formMessage !== "") {
+      if (validateEmail(formEmail)) {
+        if (!$("#submitting").hasClass("on")) {
+          $("#submitting").addClass("on")
+        }
+        
+        if (!$("#submit").hasClass("on")) {
+          $("#submit").addClass("on")
         }
 
-        const formName = $('#name').val()
-        const formEmail = $('#email').val()
-        const formSubject = $('#subject').val()
-        const formMessage = $('#message').val()
-        const formCopy = $("#copy").is(":checked")
+        emailjs.sendForm('service_wqghlcv', 'template_ktq0bk6', "#contact-form")
+          .then(function() {
+            $("#submitting").removeClass("on")
+            $("#submitting").removeClass("on")
 
-        if (formName !== '' && formEmail !== '' && formMessage !== "") {
-            if (validateEmail(formEmail)) {
-                const fd = new FormData()
-
-                if (!$("#submitting").hasClass("on")) {
-                    $("#submitting").addClass("on")
-                }
-                
-                if (!$("#success").hasClass("on")) {
-                    $("#success").addClass("on")
-                }
-
-                fd.append('formName', formName)
-                fd.append('formEmail', formEmail)
-                fd.append('formSubject', formSubject)
-                fd.append('formMessage', formMessage)
-
-                if (formCopy) {
-                    fd.append("formCopy", true)
-                }
-
-                fetch("send-mail.php", {
-                    method: "POST",
-                    body: fd
-                })
-                .then(response => {
-                    if(!response.ok) {
-                        throw new Error(`HTTP error! Status:
-                        ${response.status}`)
-                    } else {
-                        $("#submitting").removeClass("on")
-
-                        if (!$("#thanks").hasClass("on")) {
-                            $("#thanks").addClass("on")
-                        }
-                    }
-
-                    return response.text()
-                })
-                .then(txt => {
-                    $("#copy").prop("checked", false)
-                    clearForm()
-                })
-            } else {
-                window.alert("Please enter a valid email address.")
+            if (!$("#success").hasClass("on")) {
+                $("#success").addClass("on")
             }
-        } else {
-            window.alert("Please include your name, email, and a message.")
-        }
-    }),
 
-    $("#menu-icon").on("click", () => {
-        if ( $("#menu-icon").hasClass("cross") ) {
-            $("#menu-icon").removeClass("cross")
-            $("#menu").removeClass("overlay-on")
-        } else {
-            $("#menu-icon").addClass("cross")
-            $("#menu").addClass("overlay-on")
-        }
-    }),
+            clearForm()
+          },
+          function(error) {
+            $("#submitting").removeClass("on")
+            $("#submitting").removeClass("on")
+            
+            if (!$("#failure").hasClass("on")) {
+              $("#failure").addClass("on")
+            }
+            
+            console.log(`HTTP error! Status: ${error.status}`)
+            console.log(`HTTP error! Error: ${error.text}`)
+          })
+      } else {
+        window.alert("Please enter a valid email address.")
+      }
+    } else {
+      window.alert("Please include your name, email, and a message.")
+    }
+  }),
 
-    $("#menu > li").on("click", () => {
-        if ( $("#menu-icon").hasClass("cross") ) {
-            $("#menu-icon").removeClass("cross")
-            $("#menu").removeClass("overlay-on")
-        }
-    }),
+  $("#menu-icon").on("click", () => {
+    if ( $("#menu-icon").hasClass("cross") ) {
+      $("#menu-icon").removeClass("cross")
+      $("#menu").removeClass("overlay-on")
+    } else {
+      $("#menu-icon").addClass("cross")
+      $("#menu").addClass("overlay-on")
+    }
+  }),
 
-    $("#success-close").on("click", () => {
-        if ($("#success").hasClass("on")) {
-            $("#success").removeClass("on")
-        }
+  $("#menu > li").on("click", () => {
+    if ( $("#menu-icon").hasClass("cross") ) {
+      $("#menu-icon").removeClass("cross")
+      $("#menu").removeClass("overlay-on")
+    }
+  }),
 
-        if ($("#thanks").hasClass("on")) {
-            $("#thanks").removeClass("on")
-        }
-    }),
+  $("#submit-close").on("click", () => {
+    if ($("#submit").hasClass("on")) {
+      $("#submit").removeClass("on")
+    }
 
-    $("#success").on("click", () => {
-        if ($("#success").hasClass("on")) {
-            $("#success").removeClass("on")
-        }
+    if ($("#success").hasClass("on")) {
+      $("#success").removeClass("on")
+    }
+  }),
 
-        if ($("#thanks").hasClass("on")) {
-            $("#thanks").removeClass("on")
-        }
-    })
-)    
+  $("#submit").on("click", () => {
+    if ($("#submit").hasClass("on")) {
+      $("#submit").removeClass("on")
+    }
+
+    if ($("#success").hasClass("on")) {
+      $("#success").removeClass("on")
+    }
+  })
+) 

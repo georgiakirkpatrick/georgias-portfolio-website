@@ -258,6 +258,10 @@ ul {
     position: relative;
 }
 
+.contact button {
+  margin: 20px 0;
+}
+
 .contact > input {
     width: 100%;
 }
@@ -317,10 +321,18 @@ ul {
     display: none;
 }
 
+.failure .linkbutton {
+  margin: 20px 0;
+}
+
 .linkbutton {
     display: inline-block;
     text-align: center;
     padding: 18px 0;
+}
+
+.message {
+  width: 90%;
 }
 
 .noscript {
@@ -371,60 +383,65 @@ ul {
     position: relative;
 }
 
-.success {
-    display: none;
-    transition: 0.5s;
+.submit {
+  display: none;
+  transition: 0.5s;
 }
 
-.success .message .close {
-    position: absolute;
-    right: 0;
-    top: 0;
-    padding: 5px;
-    margin: 5px
+.submit .message .close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 5px;
+  margin: 5px
 }
 
-.success.on {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: #a8642d2e;
-    color: black;
+.submit.on {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #a8642d2e;
+  color: black;
 }
 
-.success.on .message {
-    position: relative;
-    padding: 50px;
-    background-color: #fff;
-    border: 1px solid #a8642d2e;
-    border-radius: 10px;
+.submit.on .message {
+  position: relative;
+  padding: 50px;
+  background-color: #fff;
+  border: 1px solid #a8642d2e;
+  border-radius: 10px;
 }
 
-.success .submitting {
-    display: none;
+.submit .submitting {
+  display: none;
 }
 
-.success .submitting.on {
-    display: initial;
+.submit .submitting.on {
+  display: initial;
 }
 
-.thanks {
-    display: none;
-}
-
-.thanks.on {
-    display: initial;
-}
-
-.success-on p {
+/* .success-on p {
     font-weight: bold;
     font-size: 1em;
+} */
+
+.submit-on p {
+  font-weight: bold;
+  font-size: 1em;
+}
+
+.success, .failure {
+  display: none;
+}
+
+.success.on, .failure.on {
+  display: initial;
 }
 
 @media screen and (min-width: 500px) {
