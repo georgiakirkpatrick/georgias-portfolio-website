@@ -39,7 +39,7 @@ $( document ).ready(
             $("#submitting").removeClass("on")
 
             if (!$("#success").hasClass("on")) {
-                $("#success").addClass("on")
+              $("#success").addClass("on")
             }
 
             clearForm()
@@ -90,6 +90,18 @@ $( document ).ready(
     }
   }),
 
+  $("#chi-rm-button").on("click", () => {
+    $("#readmore-chi").toggleClass("on")
+    $("#chi-rl-button").toggleClass("on")
+    $("#chi-rm-button").toggleClass("on")
+  }),
+
+  $("#chi-rl-button").on("click", () => {
+    $("#readmore-chi").toggleClass("on")
+    $("#chi-rl-button").toggleClass("on")
+    $("#chi-rm-button").toggleClass("on")
+  }),
+
   $("#submit").on("click", () => {
     if ($("#submit").hasClass("on")) {
       $("#submit").removeClass("on")
@@ -98,5 +110,30 @@ $( document ).ready(
     if ($("#success").hasClass("on")) {
       $("#success").removeClass("on")
     }
-  })
+  }),
+
+  $("#vero-rm-button").on("click", () => {
+    $("#readmore-vero").toggleClass("on")
+    $("#vero-rl-button").toggleClass("on")
+    $("#vero-rm-button").toggleClass("on")
+  }),
+
+  $("#vero-rl-button").on("click", () => {
+    $("#readmore-vero").toggleClass("on")
+    $("#vero-rl-button").toggleClass("on")
+    $("#vero-rm-button").toggleClass("on")
+  }),
+
+  $("#wayw-rm-button").on("click", () => {
+    $("#readmore-wayw").toggleClass("on")
+    $("#wayw-rl-button").toggleClass("on")
+    $("#wayw-rm-button").toggleClass("on")
+  }),
+
+  $("#wayw-rl-button").on("click", () => {
+    $("#readmore-wayw").toggleClass("on")
+    $("#wayw-rl-button").toggleClass("on")
+    $("#wayw-rm-button").toggleClass("on")
+  }),
+
 ) 

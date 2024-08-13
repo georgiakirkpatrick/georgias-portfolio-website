@@ -9,6 +9,10 @@ a {
     text-decoration: none;
 }
 
+article {
+  width: 100%;
+}
+
 body {
     position: relative;
     margin: 0px;
@@ -29,7 +33,7 @@ button, .linkbutton {
     box-shadow: 4px 4px 1px 1px #a8642dbb;
 }
 
-button:hover, .linkbutton:hover {
+button:hover, .linkbutton:hover, .read-button.on:hover {
     background-color: #f5dfd2a8;
     border-color: #f5dfd2a8;
 }
@@ -84,6 +88,7 @@ h1 {
 
 h3 {
     font-family: 'Muli', sans-serif;
+    padding: 0 6px;
 }
 
 h4 {
@@ -93,9 +98,9 @@ h4 {
 }
 
 header, main {
-    width: 90%;
-    max-width: 630px;
-    margin: auto;
+	width: 90%;
+	max-width: 630px;
+	margin: auto;
 }
 
 html {
@@ -154,6 +159,10 @@ nav ul a {
     font-size: 1.5em;
     color: #fff;
     text-decoration: none;
+}
+
+.project p {
+  padding: 0 6px;
 }
 
 section {
@@ -333,6 +342,7 @@ ul {
 
 .message {
   width: 90%;
+	max-width: 630px;
 }
 
 .noscript {
@@ -377,6 +387,38 @@ ul {
     object-fit: cover;
     object-position: top;
     margin: 3vh auto 3vh;
+}
+
+.project-pic {
+  padding: 0 6px;
+}
+
+.read-button {
+  display: none;
+}
+
+.read-button.on {
+  display: initial;
+  background: initial;
+  height: initial;
+  width: initial;
+  border: initial;
+  box-shadow: initial;
+  color: #a8642df1;
+}
+
+.read-button.on:active {
+  background-color: #f5dfd267;
+  border-color: #f5dfd267;
+  box-shadow: initial;
+}
+
+.read-sect {
+  display: none;
+}
+
+.read-sect.on {
+  display: initial
 }
 
 .relative {
@@ -425,11 +467,6 @@ ul {
 .submit .submitting.on {
   display: initial;
 }
-
-/* .success-on p {
-    font-weight: bold;
-    font-size: 1em;
-} */
 
 .submit-on p {
   font-weight: bold;
