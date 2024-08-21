@@ -414,15 +414,26 @@ ul {
 }
 
 .read-sect {
-  display: none;
+  transition: max-height 1s;
+  max-height: 0px;
+  overflow: hidden;
 }
 
 .read-sect.on {
-  display: initial
+  max-height: 600px;
+}
+
+.read-sect > p {
+  color: #faeade6b;
+  transition: color 1s;
+}
+
+.read-sect.on > p {
+  color: #170b01;
 }
 
 .relative {
-    position: relative;
+  position: relative;
 }
 
 .submit {

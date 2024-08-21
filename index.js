@@ -134,6 +134,5 @@ $( document ).ready(
     $("#readmore-wayw").toggleClass("on")
     $("#wayw-rl-button").toggleClass("on")
     $("#wayw-rm-button").toggleClass("on")
-  }),
-
+  })
 ) 
