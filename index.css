@@ -545,11 +545,13 @@ ul {
         font-size: 8.2em;
     }
 
-    .desktop {
-      display: initial;
+    .desktop, 
+    img.project-pic.desktop {
+      display: block;
     }
 
-    .mobile {
+    .mobile, 
+    img.project-pic.mobile {
       display: none;
     }
 }
