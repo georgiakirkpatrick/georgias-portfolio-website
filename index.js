@@ -10,7 +10,7 @@ const validateEmail = email => {
   return res.test(email)
 }
 
-$( document ).ready(
+$( document ).ready(() => {
   $("#contact-form").on("submit", event => {
     event.preventDefault()
 
@@ -36,7 +36,6 @@ $( document ).ready(
         emailjs.sendForm('service_wqghlcv', 'template_ktq0bk6', "#contact-form")
           .then(function() {
             $("#submitting").removeClass("on")
-            $("#submitting").removeClass("on")
 
             if (!$("#success").hasClass("on")) {
               $("#success").addClass("on")
@@ -45,7 +44,6 @@ $( document ).ready(
             clearForm()
           },
           function(error) {
-            $("#submitting").removeClass("on")
             $("#submitting").removeClass("on")
             
             if (!$("#failure").hasClass("on")) {
@@ -61,24 +59,25 @@ $( document ).ready(
     } else {
       window.alert("Please include your name, email, and a message.")
     }
-  }),
+  });
 
   $("#menu-icon").on("click", () => {
     if ( $("#menu-icon").hasClass("cross") ) {
+      $("#menu-icon").removeClass("running")
       $("#menu-icon").removeClass("cross")
       $("#menu").removeClass("overlay-on")
     } else {
       $("#menu-icon").addClass("cross")
       $("#menu").addClass("overlay-on")
     }
-  }),
+  });
 
   $("#menu > li").on("click", () => {
     if ( $("#menu-icon").hasClass("cross") ) {
       $("#menu-icon").removeClass("cross")
       $("#menu").removeClass("overlay-on")
     }
-  }),
+  });
 
   $("#submit-close").on("click", () => {
     if ($("#submit").hasClass("on")) {
@@ -88,19 +87,19 @@ $( document ).ready(
     if ($("#success").hasClass("on")) {
       $("#success").removeClass("on")
     }
-  }),
+  });
 
   $("#chi-rm-button").on("click", () => {
     $("#readmore-chi").toggleClass("on")
     $("#chi-rl-button").toggleClass("on")
     $("#chi-rm-button").toggleClass("on")
-  }),
+  });
 
   $("#chi-rl-button").on("click", () => {
     $("#readmore-chi").toggleClass("on")
     $("#chi-rl-button").toggleClass("on")
     $("#chi-rm-button").toggleClass("on")
-  }),
+  });
 
   $("#submit").on("click", () => {
     if ($("#submit").hasClass("on")) {
@@ -110,29 +109,29 @@ $( document ).ready(
     if ($("#success").hasClass("on")) {
       $("#success").removeClass("on")
     }
-  }),
+  });
 
   $("#vero-rm-button").on("click", () => {
     $("#readmore-vero").toggleClass("on")
     $("#vero-rl-button").toggleClass("on")
     $("#vero-rm-button").toggleClass("on")
-  }),
+  });
 
   $("#vero-rl-button").on("click", () => {
     $("#readmore-vero").toggleClass("on")
     $("#vero-rl-button").toggleClass("on")
     $("#vero-rm-button").toggleClass("on")
-  }),
+  });
 
   $("#wayw-rm-button").on("click", () => {
     $("#readmore-wayw").toggleClass("on")
     $("#wayw-rl-button").toggleClass("on")
     $("#wayw-rm-button").toggleClass("on")
-  }),
+  });
 
   $("#wayw-rl-button").on("click", () => {
     $("#readmore-wayw").toggleClass("on")
     $("#wayw-rl-button").toggleClass("on")
     $("#wayw-rm-button").toggleClass("on")
-  })
-) 
+  });
+});
