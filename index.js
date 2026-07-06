@@ -11,6 +11,7 @@ const validateEmail = email => {
 }
 
 $( document ).ready(() => {
+  // --- Contact Form Submission Handler ---
   $("#contact-form").on("submit", event => {
     event.preventDefault()
 
@@ -61,9 +62,9 @@ $( document ).ready(() => {
     }
   });
 
+  // --- Mobile Navigation Handlers ---
   $("#menu-icon").on("click", () => {
     if ( $("#menu-icon").hasClass("cross") ) {
-      $("#menu-icon").removeClass("running")
       $("#menu-icon").removeClass("cross")
       $("#menu").removeClass("overlay-on")
     } else {
@@ -79,6 +80,7 @@ $( document ).ready(() => {
     }
   });
 
+  // --- Modal / Popup Close Handlers ---
   $("#submit-close").on("click", () => {
     if ($("#submit").hasClass("on")) {
       $("#submit").removeClass("on")
@@ -87,18 +89,6 @@ $( document ).ready(() => {
     if ($("#success").hasClass("on")) {
       $("#success").removeClass("on")
     }
-  });
-
-  $("#chi-rm-button").on("click", () => {
-    $("#readmore-chi").toggleClass("on")
-    $("#chi-rl-button").toggleClass("on")
-    $("#chi-rm-button").toggleClass("on")
-  });
-
-  $("#chi-rl-button").on("click", () => {
-    $("#readmore-chi").toggleClass("on")
-    $("#chi-rl-button").toggleClass("on")
-    $("#chi-rm-button").toggleClass("on")
   });
 
   $("#submit").on("click", () => {
@@ -111,6 +101,48 @@ $( document ).ready(() => {
     }
   });
 
+  // --- Project Panel Toggle Handlers ---
+
+  // 1. KEEN Sustainability Internship
+  $("#keen-rm-button").on("click", () => {
+    $("#readmore-keen").toggleClass("on")
+    $("#keen-rl-button").toggleClass("on")
+    $("#keen-rm-button").toggleClass("on")
+  });
+
+  $("#keen-rl-button").on("click", () => {
+    $("#readmore-keen").toggleClass("on")
+    $("#keen-rl-button").toggleClass("on")
+    $("#keen-rm-button").toggleClass("on")
+  });
+
+  // 2. Data Governance Guide
+  $("#gov-rm-button").on("click", () => {
+    $("#readmore-gov").toggleClass("on")
+    $("#gov-rl-button").toggleClass("on")
+    $("#gov-rm-button").toggleClass("on")
+  });
+
+  $("#gov-rl-button").on("click", () => {
+    $("#readmore-gov").toggleClass("on")
+    $("#gov-rl-button").toggleClass("on")
+    $("#gov-rm-button").toggleClass("on")
+  });
+
+  // 3. Salmon Conservation Study
+  $("#sal-rm-button").on("click", () => {
+    $("#readmore-sal").toggleClass("on")
+    $("#sal-rl-button").toggleClass("on")
+    $("#sal-rm-button").toggleClass("on")
+  });
+
+  $("#sal-rl-button").on("click", () => {
+    $("#readmore-sal").toggleClass("on")
+    $("#sal-rl-button").toggleClass("on")
+    $("#sal-rm-button").toggleClass("on")
+  });
+
+  // 4. Veronaut (Capstone)
   $("#vero-rm-button").on("click", () => {
     $("#readmore-vero").toggleClass("on")
     $("#vero-rl-button").toggleClass("on")
@@ -123,6 +155,20 @@ $( document ).ready(() => {
     $("#vero-rm-button").toggleClass("on")
   });
 
+  // 5. Chivolo
+  $("#chi-rm-button").on("click", () => {
+    $("#readmore-chi").toggleClass("on")
+    $("#chi-rl-button").toggleClass("on")
+    $("#chi-rm-button").toggleClass("on")
+  });
+
+  $("#chi-rl-button").on("click", () => {
+    $("#readmore-chi").toggleClass("on")
+    $("#chi-rl-button").toggleClass("on")
+    $("#chi-rm-button").toggleClass("on")
+  });
+
+  // 6. What Are You Wearing? Quiz
   $("#wayw-rm-button").on("click", () => {
     $("#readmore-wayw").toggleClass("on")
     $("#wayw-rl-button").toggleClass("on")
