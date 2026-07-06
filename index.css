@@ -121,7 +121,7 @@ input[type="text"], input[type="email"], textarea {
     line-height: normal;
 }
 
-input[type="text"], input[type="email"], textarea[id="subj"] {
+input[type="text"], input[type="email"] {
     height: 50px;
 }
 
@@ -169,7 +169,7 @@ section {
     padding: 10vh 0;
 }
 
-textarea[id="msg"] {
+textarea[id="message"] {
     height: 16vh;
 }
 
